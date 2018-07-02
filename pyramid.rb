@@ -21,7 +21,7 @@ module Pyramid
   end
 
 # Iteration method
-  def self.get_pyramid_itter(pyramid)
+  def self.get_pyramid_iter(pyramid)
     levels = pyramid.last.size - 1
     levels.times do |i|
       pyramid << get_upper_level(pyramid[i])
@@ -35,7 +35,7 @@ module Pyramid
     end
 
     if base.size > 9999
-      get_pyramid_itter([base])
+      get_pyramid_iter([base])
     else
       get_pyramid_rec([base])
     end
